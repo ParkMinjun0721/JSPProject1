@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #food, #color {
+            width: 100px;
+            height: 33px;
+        }
+        #phone1, #phone2, #phone3 {
+            width: 75px;
+            height: 30px;
+        }
+        #email {
+            width: 200px;
+            height: 40px;
+        }
+        .center{
+            text-align: center;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+            position: relative;
+            vertical-align: bottom;
+        }
+        .checkB{
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div></div>
+<div class="center">
+    <h2>HTML Forms</h2>
+<form method="post" action="form_ok.jsp">
+    <fieldset>
+        <legend>What do you like?</legend>
+        <select id="food" name="food" required>
+            <option value="짜장면">짜장면 </option>
+            <option value="짬뽕">짬뽕</option>
+            <option value="탕수육">탕수육</option>
+            <option value="다 싫어!">다 싫어!</option>
+        </select>
+    </fieldset>
+    <br>
+    <fieldset>
+        <label>Gender:</label><br>
+        <input type="radio" id="Male" name="gender" value="Male" checked>
+        <label for="Male">Male</label><br>
+        <input type="radio" id="Female" name="gender" value="Female">
+        <label for="Female">Female</label><br>
+        <input type="radio" id="Alien" name="gender" value="Alien">
+        <label for="Alien">Alien</label><br><br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <label for="firstname">First name:</label><br>
+        <input type="text" id="firstname" name="name" placeholder="Minjun" required><br>
+        <label for="lastname">Last name:</label><br>
+        <input type="text" id="lastname" name="name" placeholder="Park" required><br><br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <label for="phone1">Input Phone Number</label><br>
+        <input type="tel" id="phone1" name="phone1" placeholder="010" required> -
+        <input type="tel" id="phone2" name="phone2" placeholder="6686" required> -
+        <input type="tel" id="phone3" name="phone3" placeholder="7408" required><br><br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <label for="email">Input E-Mail</label><br>
+        <input type="email" id="email" name="email" placeholder="22000257@handong.edu"><br><br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Do you have vehicle?</legend>
+        <div class="checkB">
+        <input type="checkbox" id="vehicle1" name="vehicle" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle" value="Horse">
+        <label for="vehicle3"> I have a horse</label><br>
+        <input type="checkbox" id="vehicle4" name="vehicle" value="None" checked>
+        <label for="vehicle4"> None</label>
+        </div><br><br>
+
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Introduce :></legend>
+        <label for="message"></label>
+        <textarea id="message" name="message" rows="10" cols="30" placeholder="Helloo">My name is Minjun Park. And my student number is 22000257.
+  </textarea>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>When is your birthday?</legend>
+        <label for="birth"></label>
+        <input type="date" id="birth" name="birth" value="2001-07-21" min="1900-01-01" 	max="2023-12-31" required/>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>Prefer Color</legend>
+            <select name="color" id="color" required>
+                <option value="빨강색">빨강색</option>
+                <option value="주황색">주황색</option>
+                <option value="노랑색">노랑색</option>
+                <option value="초록색">초록색</option>
+                <option value="파란색">파란색</option>
+                <option value="남색">남색</option>
+                <option value="보라색">보라색</option>
+            </select>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>Platform currently in use</legend>
+        <input type="radio" id="PC" name="platform" value="PC" checked>
+        <label for="PC">PC</label>
+
+        <input type="radio" id="Tablet" name="platform" value="Tablet">
+        <label for="Tablet">Tablet</label>
+
+        <input type="radio" id="Mobile" name="platform" value="Mobile">
+        <label for="Mobile">Mobile</label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Please check again before submitting!</legend>
+        <p style="margin: 0;">Have a good day!</p><br>
+        <input type="submit" value="Submit" style="width: 160px; height: 60px;">
+        <input type="reset" value="Reset" style="width: 160px; height: 60px;">
+    </fieldset>
+
+
+</form>
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/form_ok.jsp".</p>
+</div>
+</body>
+</html>
